@@ -1,41 +1,33 @@
 {
-  "ext.SemanticMediaWikiGraph": {
-    "localBasePath": "modules/ext.SemanticMediaWikiGraph",
-    "remoteExtPath": "SemanticMediaWikiGraph/modules/ext.SemanticMediaWikiGraph",
-    "ResourceModules": {
-      "ext.SemanticMediaWikiGraph": {
-        "scripts": [
-          "app.js",
-          "d3_v4.min.js",
-          "select2.full.min.js",
-          "utility.js"
-        ],
-        "dependencies": [
-          "jquery.ui",
-          "mediawiki.util"
-        ]
-      }
-    },
-    "packageFiles": [
-      "app.js",
-      "d3_v4.min.js",
-      "select2.full.min.js",
-      "utility.js"
-    ],
-    "dependencies": [
-      "mediawiki.util"
-    ],
-    "name": "Semantic-MediaWiki-Graph",
+    "name": "Semantic MediaWiki Graph",
     "author": [
-      "Tobias Weller"
+		"Tobias Weller"
     ],
     "license-name": "Apache License 2.0",
     "url": "https://www.mediawiki.org/wiki/Extension:Semantic_MediaWiki_Graph",
-    "descriptionmsg": "Semantic-MediaWiki-Graph",
+    "description": "Visualizes the semantic information of any Semantic MediaWiki page",
     "type": "parserhook",
     "requires": {
-      "MediaWiki": ">= 1.38.0"
+		"MediaWiki": ">= 1.38.0",
+		"extensions": {
+			"SemanticMediaWiki": "*"
+		}
+	},
+	"ResourceModules": {
+		"ext.SemanticMediaWikiGraph": {
+			"localBasePath": "modules/ext.SemanticMediaWikiGraph",
+    		"remoteExtPath": "SemanticMediaWikiGraph/modules/ext.SemanticMediaWikiGraph",
+        	"packageFiles": [
+				"app.js",
+				"d3_v4.min.js",
+				"select2.full.min.js",
+				"utility.js"
+			],
+	        "dependencies": [
+				"jquery.ui",
+				"mediawiki.util"
+			]
+    	}
     },
-    "manifest_version": 1
-  }
+	"manifest_version": 2
 }
